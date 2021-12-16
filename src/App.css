@@ -1,38 +1,148 @@
-.App {
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: cursive;
+}
+
+html {
+  background: linear-gradient(
+    to bottom right,
+    rgba(31, 36, 39, 0.9),
+    rgba(31, 36, 39, 1)
+  );
+}
+
+.title {
   text-align: center;
+  padding: 3rem 0;
+  /* background-color: blue; */
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.title h1 {
+  margin: 10px;
+  color: #e9bf28;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.title p {
+  color: #b8b091;
+  font-size: 18px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+/*_________SEARCH BAR_______________  */
+
+.form {
+  /* background-color: pink; */
+  padding: 10px;
+  margin: 1rem;
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  align-items: center;
+}
+
+input {
+  border-radius: 5px;
+  border: none;
+  padding: 10px 15px;
+  outline: none;
+  width: 60%;
+  color: white;
+  background-color: transparent;
+  box-shadow: inset 5px 5px 10px rgba(0, 0, 0, 0.7),
+    inset -1px -1px 10px rgba(109, 123, 133, 0.7);
+}
+
+input:focus {
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+@media screen and (max-width: 411px) {
+  input {
+    width: 100%;
+  }
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+/* button {
+  width: 80px;
+  align-self: center;
+  padding: 5px 12px;
+  border-radius: 5px;
+  border: 1px solid rgb(132, 131, 131);
+  cursor: pointer;
+} */
+
+.err-msg {
+  color: red;
+  margin: 15px;
+  font-style: italic;
+}
+
+/* ____________RECIPES_______________ */
+.recipes-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  /* background-color: blue; */
+  padding: 1rem 0;
+}
+
+.card {
+  width: 230px;
+  background: linear-gradient(
+    to bottom right,
+    rgba(114, 129, 140, 0.7),
+    rgb(37, 42, 45)
+  );
+  margin: 10px 1rem;
+  padding-bottom: 15px;
+  border-radius: 20px;
+  box-shadow: 7px 7px 15px black, -3px -7px 8px rgba(255, 255, 255, 0.15),
+    inset 0px 0px 10px rgba(109, 123, 133, 0.6);
+}
+
+.card-img {
+  width: 100%;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+}
+
+.card-info {
+  padding: 5px;
+  /* text-align: center; */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.card-category {
+  color: #b8b091;
+  margin-top: 10px;
+}
+
+.card-title {
+  margin: 15px 0;
+  margin-bottom: 20px;
+  color: #e9bf28;
+  /* background-color: pink; */
+}
+
+.btn {
+  text-decoration: none;
+  /* background-color: #393f46; */
+  border-radius: 15px;
+  background: linear-gradient(
+    to bottom right,
+    rgba(114, 129, 140, 0.8),
+    rgb(37, 42, 45)
+  );
+  box-shadow: 7px 7px 10px black, inset 0px 0px 6px rgba(109, 123, 133, 0.5);
+  color: #b8b091;
+  padding: 5px 15px;
+  transition: 0.2s ease-in-out;
+}
+
+.btn:hover {
+  transform: translateY(3px);
+  transition: 0.2s ease-in-out;
 }
