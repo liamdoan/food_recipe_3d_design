@@ -1,3 +1,6 @@
+# DEPLOYMENT
+https://liamdoan.github.io/food_recipe_3d_design/
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
